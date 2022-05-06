@@ -93,6 +93,30 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# START: Load nvm version from nvmrc
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+# END: Load nvm version from nvmrc
+
+
 do_travis_login() {
   travis login -I -t $TRAVIS_TOKEN -e https://travis.mpi-internal.com/api --github-token=$GITHUB_TOKEN && travis endpoint --set-default -e https://travis.mpi-internal.com/api
 }
@@ -105,13 +129,24 @@ alias travisencrypt=encrypt_travis_secure
 alias nr="npm run"
 alias ni='npm install --prefer-online'
 alias nri='rm -rf ./node_modules && rm -f package-lock.json && npm install --prefer-online --no-audit'
-alias git_update='git checkout master && git pull && git fetch -p && git delete-merged-branches'
+alias nri7='rm -rf ./node_modules && rm -f package-lock.json && npm install --legacy-peer-deps --prefer-online --no-audit'
+alias git_update='git checkout $(git rev-parse --abbrev-ref HEAD) && git pull && git fetch -p && git delete-merged-branches'
+alias gc='git checkout'
 
 alias no_cors='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir=/tmp/chrome_dev_test --disable-web-security'
 
+# MA MONOLITO
+export MA_ENV=dev 
+
+# Adevinta Registry token
+export NPM_TOKEN=792708d9-05c5-45ab-8987-b1785b31498e
+# FOR MT WEB APP
 export DOCKER_USER=rafael.moral@adevinta.com
 export DOCKER_PASSWORD=AKCp8hzXjzc3ecpyJqVRTDuxXUc8sab3Tpa8jswFC75bjHKxnH4wR1SGQrWYL1Tgb7icRJsTQ
-
+# FOR MA WEB APP
+export ARTIFACTORY_USER=rafael.moral@adevinta.com
+export ARTIFACTORY_NPM_SECRET=cmFmYWVsLm1vcmFsQGFkZXZpbnRhLmNvbTpBS0NwOGh6WGp6YzNlY3B5SnFWUlREdXhYVWM4c2FiM1RwYThqc3dGQzc1YmpIS3huSDR3UjFTR1FyV1lMMVRnYjdpY1JKc1RR
+export ARTIFACTORY_PWD=AKCp8hzXjzc3ecpyJqVRTDuxXUc8sab3Tpa8jswFC75bjHKxnH4wR1SGQrWYL1Tgb7icRJsTQ
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -130,3 +165,4 @@ export NVM_DIR=~/.nvm
 vc() { open "https://meet.schibsted.com/webapp/conference/es.mr${1}@vc.schibsted.com?callType=video" }
 # added by travis gem
 [ ! -s /Users/rafael.moral/.travis/travis.sh ] || source /Users/rafael.moral/.travis/travis.sh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
