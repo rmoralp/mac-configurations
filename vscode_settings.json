@@ -2,11 +2,15 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[svg]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -15,22 +19,29 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+    "source.fixAll.eslint": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabSize": 2,
   "editor.smoothScrolling": true,
-  "eslint.autoFixOnSave": false,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
       "javascript": "javascriptreact"
   },
   "files.autoSave": "off",
   "gitlens.codeLens.authors.enabled": false,
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.implicitProjectConfig.checkJs": true,
   "javascript.preferences.quoteStyle": "single",
   "javascript.validate.enable": false,
   "typescript.validate.enable": false,
@@ -39,12 +50,6 @@
   "workbench.editor.showTabs": false,
   "workbench.iconTheme": "vscode-great-icons",
   "window.nativeTabs": true,
-  "window.zoomLevel": 0,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
-    "source.fixAll.eslint": true
-
-  },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "peacock.favoriteColors": [
     {
@@ -100,130 +105,33 @@
       "value": "#42b883"
     }
   ],
-  "todo-tree.tree.showScanModeButton": false,
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "git.confirmSync": false,
+  "js/ts.implicitProjectConfig.strictNullChecks": true
 }
-
-
-
-// {
-// "[html]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// },
-// "[javascript]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// },
-// "[json]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// },
-// "[scss]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode",
-//   "editor.formatOnSave": true
-// },
-// "editor.cursorBlinking": "phase",
-// "editor.cursorStyle": "line-thin",
-// "editor.fontFamily": "'Cascadia Code', Hasklig, Menlo, Monaco, 'Courier New', monospace",
-// "editor.fontLigatures": true,
-// "editor.fontSize": 13,
-// "editor.fontWeight": "500",
-// "editor.minimap.enabled": false,
-// "editor.multiCursorModifier": "ctrlCmd",
-// "editor.scrollBeyondLastLine": false,
-// "editor.smoothScrolling": true,
-// "editor.tabCompletion": "onlySnippets",
-// "editor.tabSize": 2,
-// "editor.wordWrap": "on",
-// "editor.wordWrapColumn": 100,
-// "explorer.confirmDelete": false,
-// "explorer.confirmDragAndDrop": false,
-// "javascript.implicitProjectConfig.experimentalDecorators": true,
-// "javascript.updateImportsOnFileMove.enabled": "always",
-// "javascript.validate.enable": false,
-// "telemetry.enableTelemetry": false,
-// "typescript.surveys.enabled": false,
-// "window.zoomLevel": 3,
-// "workbench.activityBar.visible": false,
-// "workbench.editor.centeredLayoutAutoResize": false,
-// "workbench.startupEditor": "newUntitledFile",
-// "workbench.statusBar.visible": true,
-// "zenMode.centerLayout": false,
-// "workbench.colorCustomizations": {
-//   "terminal.background":"#111",
-//   "terminal.foreground":"#eee",
-//   "terminalCursor.background":"#5F574F",
-//   "terminalCursor.foreground":"#5F574F",
-//   "terminal.ansiBlack":"#000000",
-//   "terminal.ansiBlue":"#83769C",
-//   "terminal.ansiBrightBlack":"#008751",
-//   "terminal.ansiBrightBlue":"#83769C",
-//   "terminal.ansiBrightCyan":"#29ADFF",
-//   "terminal.ansiBrightGreen":"#00E756",
-//   "terminal.ansiBrightMagenta":"#FF77A8",
-//   "terminal.ansiBrightRed":"#FF004D",
-//   "terminal.ansiBrightWhite":"#FFF1E8",
-//   "terminal.ansiBrightYellow":"#FFF024",
-//   "terminal.ansiCyan":"#29ADFF",
-//   "terminal.ansiGreen":"#00E756",
-//   "terminal.ansiMagenta":"#FF77A8",
-//   "terminal.ansiRed":"#FF004D",
-//   "terminal.ansiWhite":"#5F574F",
-//   "terminal.ansiYellow":"#FFF024"
-// },
-// "eslint.autoFixOnSave": true,
-// "editor.suggestSelection": "first",
-// "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-// "terminal.integrated.cursorBlinking": true,
-// "terminal.integrated.cursorStyle": "line",
-// "breadcrumbs.enabled": false,
-// "workbench.colorTheme": "One Dark Pro",
-// "css.validate": false,
-// "javascript.implicitProjectConfig.checkJs": true,
-// "oneDarkPro.editorTheme": "panda",
-// "oneDarkPro.vivid": true,
-// "oneDarkPro.bold": true
-// }
-
-// MIO
-// { 
-//   "[javascript]": {
-//       "editor.formatOnSave": true,
-//       "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   },
-//   "[scss]": {
-//       "editor.formatOnSave": true,
-//       "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   },
-//   "[markdown]": {
-//       "editor.formatOnSave": false
-//   },
-//   "[json]": {
-//     "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   },
-//   "editor.defaultFormatter": "esbenp.prettier-vscode",
-//   "editor.tabSize": 2,
-//   "editor.formatOnSave": false,
-//   "eslint.autoFixOnSave": true,
-//   "emmet.triggerExpansionOnTab": true,
-//   "emmet.includeLanguages": {
-//       "javascript": "javascriptreact"
-//   },
-//   "files.autoSave": "off",
-//   "gitlens.codeLens.authors.enabled": false,
-//   "javascript.implicitProjectConfig.experimentalDecorators": true,
-//   "javascript.updateImportsOnFileMove.enabled": "always",
-//   "javascript.implicitProjectConfig.checkJs": true,
-//   "javascript.preferences.quoteStyle": "single",
-//   "javascript.validate.enable": false,
-//   "typescript.validate.enable": false,
-//   "typescript.preferences.quoteStyle": "single",
-//   "workbench.startupEditor": "welcomePage",
-//   "workbench.editor.showTabs": false,
-//   "workbench.iconTheme": "vscode-great-icons",
-//   "window.nativeTabs": true,
-//   "window.zoomLevel": 0
-// }
-
-
-
-
-
