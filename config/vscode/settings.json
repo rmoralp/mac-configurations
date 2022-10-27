@@ -1,4 +1,4 @@
-{ 
+{
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -9,6 +9,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
@@ -35,8 +39,15 @@
   "editor.smoothScrolling": true,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
-      "javascript": "javascriptreact"
+    "javascript": "javascriptreact"
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ],
   "files.autoSave": "off",
   "gitlens.codeLens.authors.enabled": false,
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
@@ -46,7 +57,7 @@
   "javascript.validate.enable": false,
   "typescript.validate.enable": false,
   "typescript.preferences.quoteStyle": "single",
-  "workbench.startupEditor": "welcomePage",
+  "workbench.startupEditor": "none",
   "workbench.editor.showTabs": false,
   "workbench.iconTheme": "vscode-great-icons",
   "window.nativeTabs": true,
@@ -133,5 +144,7 @@
     "**/.git": false
   },
   "git.confirmSync": false,
-  "js/ts.implicitProjectConfig.strictNullChecks": true
+  "js/ts.implicitProjectConfig.strictNullChecks": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDelete": false
 }
