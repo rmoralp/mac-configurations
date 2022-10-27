@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+echo ""
 echo "#############################"
 echo "# Installing various programs from brew"
 echo "#############################"
