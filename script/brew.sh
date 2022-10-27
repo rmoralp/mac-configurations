@@ -33,19 +33,19 @@ echo "Install docker"
 brew_install_or_upgrade docker
 
 echo "Install chrome"
-brew install --cask google-chrome
+brew install --no-quarantine --cask google-chrome
 
 echo "Install slack"
-brew install --cask slack
+brew install --no-quarantine --cask slack
 
 echo "Install insomnia"
-brew install --cask insomnia
+brew install --no-quarantine --cask insomnia
 
 echo "Install figma"
-brew install --cask figma
+brew install --no-quarantine --cask figma
 
 echo "Install clipy"
-brew install --cask clipy
+brew install --no-quarantine --cask clipy
 
 echo "Install visual-studio-code"
-brew install --cask visual-studio-code
+brew install --no-quarantine --cask visual-studio-code
