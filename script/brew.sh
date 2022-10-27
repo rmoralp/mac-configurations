@@ -32,8 +32,13 @@ brew_install_or_upgrade curl
 echo "Install docker"
 brew_install_or_upgrade docker
 
+brew tap homebrew/cask-versions
+
 echo "Install chrome"
 brew install --no-quarantine --cask google-chrome
+
+echo "Install firefox"
+brew install --no-quarantine --cask firefox
 
 echo "Install slack"
 brew install --no-quarantine --cask slack
@@ -49,3 +54,6 @@ brew install --no-quarantine --cask clipy
 
 echo "Install visual-studio-code"
 brew install --no-quarantine --cask visual-studio-code
+
+echo "Install zoom"
+brew install --no-quarantine --cask zoom
