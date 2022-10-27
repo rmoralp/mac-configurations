@@ -1,3 +1,8 @@
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
 # Mark it as a function rather than an external program
 autoload -U add-zsh-hook
 # Load nvm version from nvmrc
