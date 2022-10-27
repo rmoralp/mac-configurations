@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+export MY_EMAIL="rafamp89@gmail.com"
+export GH_USERNAME="rmoralp"
+export GH_ACCESS_TOKEN="..."
