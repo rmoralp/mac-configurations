@@ -2,22 +2,27 @@
 
 ## Getting Started
 
+### Automatically install all the things
+
 ```bash
-# install stuff
-~/path/to/dotfiles/dotfiles install
+bash ./commands/install.sh
 ```
 
-## What's included
-- Mac configurations
-- Install tools (with brew)
-- Install node using nvm
-- Install vscode extensions
+It includes:
 
-## TODO
-- [ ] vscode config and plugins
-- [ ] shell functions
-- [ ] npm config and dependencies
-- [ ] zsh configuration and aliases - WIP
+- Mac configurations
+- CLI Tools
+- Mac Apps
+- Node & NVM
+- VSCode extensions
+
+### Manually set some configurations
+
+Inside config folder, you can find some configurations for:
+- VSCode
+- NPM
+- Git
+- Oh my zsh
 
 ## Similar repository examples 
 
