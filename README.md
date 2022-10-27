@@ -9,14 +9,15 @@
 
 ## What's included
 - Mac configurations
-- Install some tools (with brew)
+- Install tools (with brew)
+- Install node using nvm
 - Install vscode extensions
-- zsh configuration and aliases
 
 ## TODO
 - [ ] vscode config and plugins
 - [ ] shell functions
 - [ ] npm config and dependencies
+- [ ] zsh configuration and aliases - WIP
 
 ## Similar repository examples 
 

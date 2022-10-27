@@ -2,8 +2,8 @@
 
 # get current location
 ROOT_DIR=$1
-CONFIG_DIR="$ROOT_DIR/configs"
-SCRIPTS_DIR="$ROOT_DIR/scripts"
+CONFIG_DIR="$ROOT_DIR/config"
+SCRIPT_DIR="$ROOT_DIR/script"
 
 # load utils
 source "$ROOT_DIR/commands/__util.sh"
@@ -26,9 +26,10 @@ RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tool
 
 # *************************************
 # Other scripts
-bash "$SCRIPTS_DIR/brew.sh" "$ROOT_DIR"
-bash "$SCRIPTS_DIR/mac.sh" "$ROOT_DIR"
-bash "$SCRIPTS_DIR/vscode.sh" "$ROOT_DIR"
+bash "$SCRIPT_DIR/mac.sh" "$ROOT_DIR"
+bash "$SCRIPT_DIR/brew.sh" "$ROOT_DIR"
+bash "$SCRIPT_DIR/node.sh" "$ROOT_DIR"
+bash "$SCRIPT_DIR/vscode.sh" "$ROOT_DIR"
 
 # *************************************
 # End

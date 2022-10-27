@@ -6,7 +6,7 @@ echo "# Setting global mac configs from mac.sh"
 echo "#############################"
 echo ""
 
-# echo "show the ~/Library folder in Finder"
+echo "show the ~/Library folder in Finder"
 chflags nohidden ~/Library
 
 echo "Enable Show remaining battery time;"
