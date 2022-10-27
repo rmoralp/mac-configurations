@@ -1,4 +1,4 @@
-# mac-configurations
+# Set up Mac OS X for Frontend development
 
 ## Getting Started
 
