@@ -26,8 +26,9 @@ RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tool
 
 # *************************************
 # Other scripts
-
 bash "$SCRIPTS_DIR/brew.sh" "$ROOT_DIR"
+bash "$SCRIPTS_DIR/mac.sh" "$ROOT_DIR"
+bash "$SCRIPTS_DIR/vscode.sh" "$ROOT_DIR"
 
 # *************************************
 # End

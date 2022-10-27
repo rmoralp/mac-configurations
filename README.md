@@ -8,6 +8,9 @@
 ```
 
 ## What's included
+- Mac configurations
+- Install some tools (with brew)
+- Install vscode extensions
 - zsh configuration and aliases
 
 ## TODO
