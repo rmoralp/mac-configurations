@@ -31,3 +31,21 @@ brew_install_or_upgrade curl
 
 echo "Install docker"
 brew_install_or_upgrade docker
+
+echo "Install chrome"
+brew install --cask google-chrome
+
+echo "Install slack"
+brew install --cask slack
+
+echo "Install insomnia"
+brew install --cask insomnia
+
+echo "Install figma"
+brew install --cask figma
+
+echo "Install clipy"
+brew install --cask clipy
+
+echo "Install visual-studio-code"
+brew install --cask visual-studio-code
