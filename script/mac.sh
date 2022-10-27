@@ -31,5 +31,9 @@ defaults write com.apple.dock show-recents -bool false
 echo "Update Apple developer utils"
 softwareupdate --all --install --force
 
+echo "Install the CLI tools for Xcode"
+xcode-select —-install
+# run `xcode-select -r` if you get an error 
+
 killall SystemUIServer
 killall "Dock"
