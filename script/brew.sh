@@ -7,7 +7,7 @@ echo "#############################"
 echo ""
 
 ROOT_DIR=$1
-source "$ROOT_DIR/commands/__util.sh"
+source "./$ROOT_DIR/commands/__util.sh"
 
 echo "Install Brew"
 brew -v >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
