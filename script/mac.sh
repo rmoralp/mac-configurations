@@ -28,8 +28,8 @@ defaults write com.apple.screencapture show-thumbnail -bool false
 echo "Hide 'recent applications' from dock"
 defaults write com.apple.dock show-recents -bool false
 
-echo "Update Apple developer utils"
-softwareupdate --all --install --force
+# echo "Update Apple developer utils"
+# softwareupdate --all --install --force
 
 echo "Install the CLI tools for Xcode"
 xcode-select —-install
