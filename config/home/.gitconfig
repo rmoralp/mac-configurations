@@ -1,3 +1,5 @@
 [user]
 	name = rafa moral
 	email = rafamp89@gmail.com
+[push]
+	autoSetupRemote = true
