@@ -26,11 +26,12 @@ ms-vsliveshare.vsliveshare
 pflannery.vscode-versionlens
 ritwickdey.LiveServer
 ryu1kn.annotator
-silvenon.mdx
 stylelint.vscode-stylelint
 syler.sass-indented
+unifiedjs.vscode-mdx
 usernamehw.errorlens
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
+vscodeshift.mui-snippets
 waderyan.gitblame
 wix.vscode-import-cost
