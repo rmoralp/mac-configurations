@@ -20,10 +20,12 @@ GraphQL.vscode-graphql-syntax
 Gruntfuggly.todo-tree
 johnpapa.vscode-peacock
 mikestead.dotenv
+MohammadBaqer.better-folding
 ms-azuretools.vscode-docker
 ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 pflannery.vscode-versionlens
+Prisma.prisma
 ritwickdey.LiveServer
 ryu1kn.annotator
 stylelint.vscode-stylelint
