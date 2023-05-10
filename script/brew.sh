@@ -6,8 +6,13 @@ echo "# Installing various programs from brew"
 echo "#############################"
 echo ""
 
-ROOT_DIR=$1
-source "$ROOT_DIR/commands/_utils.sh"
+function brew_install_or_upgrade {
+    if brew ls --versions "$1" >/dev/null; then
+        HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade "$1"
+    else
+        HOMEBREW_NO_AUTO_UPDATE=1 brew install "$1"
+    fi
+}
 
 echo "Install Brew"
 brew -v >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

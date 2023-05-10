@@ -14,7 +14,10 @@ bash "$SCRIPT_DIR/mac.sh" "$ROOT_DIR"
 # *************************************
 # oh-my-zsh
 #
-log_section_start "Installing oh-my-zsh"
+echo ""
+echo ""
+echo "-> Installing oh-my-zsh"
+echo ""
 
 if [ -d ~/.oh-my-zsh/ ]; then
   echo "Cleaning up ~/.oh-my-zsh/"
