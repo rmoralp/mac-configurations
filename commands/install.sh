@@ -31,7 +31,6 @@ RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tool
 # Other scripts
 bash "$SCRIPT_DIR/brew.sh" "$ROOT_DIR"
 bash "$SCRIPT_DIR/node.sh" "$ROOT_DIR"
-bash "$SCRIPT_DIR/vscode.sh" "$ROOT_DIR"
 
 # *************************************
 # End

@@ -37,6 +37,9 @@ brew_install_or_upgrade curl
 echo "Install docker"
 brew_install_or_upgrade docker
 
+echo "Install pnpm"
+brew_install_or_upgrade pnpm
+
 brew tap homebrew/cask-versions
 
 echo "Install chrome"

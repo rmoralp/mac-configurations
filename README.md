@@ -14,15 +14,17 @@ It includes:
 - CLI Tools
 - Mac Apps
 - Node & NVM
-- VSCode extensions
 
 ### Manually set some configurations
 
 Inside config folder, you can find some configurations for:
-- VSCode
 - NPM
 - Git
 - Oh my zsh
+
+
+### Remote backups
+- VSCode settings would be synced once logged in with your account
 
 ## Similar repository examples 
 
